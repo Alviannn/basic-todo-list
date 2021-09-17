@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>To-Do List App</title>
+
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="insert.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    </head>
+
+    <body>
+        <div class="container">
+            <header>
+                <h1 class="title">ADD TO-DO</h1>
+                <hr class="line" />
+            </header>
+
+            <form method="POST" action="/create-todo">
+                <input name="todo" type="text" placeholder="Insert your todo" />
+                <input type="submit" class="btn insert-btn" value="Insert" />
+            </form>
+        </div>
+    </body>
+</html>

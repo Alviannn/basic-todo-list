@@ -1,0 +1,21 @@
+.container {
+    margin: 200px 0;
+}
+
+input {
+    font-size: 18px;
+    width: 93%;
+
+    padding: 20px;
+    margin-bottom: 20px;
+
+    border: none;
+    border-radius: 10px;
+    box-shadow: 2px 4px 4px 0px rgb(136, 136, 136);
+}
+
+.btn.insert-btn {
+    width: 100%;
+    padding: 20px;
+    font-size: 18px;
+}

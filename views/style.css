@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    font-family: 'Roboto', Helvetica, sans-serif;
+
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+}
+
+body {
+    background-color: #3c424b;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    margin: 40px 0;
+    padding: 40px;
+
+    background-color: #d9e0e7;
+    width: 30%;
+
+    border-radius: 20px;
+}
+
+header {
+    margin-bottom: 40px;
+}
+
+footer {
+    margin-top: 40px;
+}
+
+.title {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.line {
+    background-color: #afb8c0;
+
+    margin: 0 auto;
+    width: 80%;
+
+    border: none;
+    height: 1px;
+}
+
+.btn {
+    display: block;
+    color: white;
+
+    text-align: center;
+    font-size: 24px;
+
+    border-radius: 10px;
+    border: none;
+
+    background-color: #3ba55d;
+    box-shadow: 2px 4px 4px 0px rgb(136, 136, 136);
+
+    padding: 20px;
+    width: 93%;
+
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgb(67, 202, 110);
+}
+
+.btn:active {
+    background-color: #3ba55d;
+}
+
+.todo {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 20px;
+
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 2px 4px 4px 0px rgb(136, 136, 136);
+
+    margin-bottom: 20px;
+}
+
+.todo-title {
+    margin-bottom: 5px;
+}
+
+.todo-meta {
+    color: #afafaf;
+}
+
+.todo:last-child {
+    margin-bottom: 0;
+}
+
+.todo-delete-btn {
+    color: #d32e2e;
+    margin: auto 0;
+    cursor: pointer;
+}

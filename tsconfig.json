@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+        "target": "ESNext",
+        "module": "CommonJS",
+        "outDir": "./dist/",
+        "allowJs": true,
+        "sourceMap": false,
+        "removeComments": true,
+        "strict": true,
+        "moduleResolution": "Node",
+        "newLine": "lf",
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "forceConsistentCasingInFileNames": true,
+        "noFallthroughCasesInSwitch": true,
+        "resolveJsonModule": true
+    },
+    "include": [
+        "./src/*"
+    ],
+    "exclude": [
+        "./dist/*"
+    ]
+}

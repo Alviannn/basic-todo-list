@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>To-Do List App</title>
+
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    </head>
+
+    <body>
+        <div class="container">
+            <header>
+                <h1 class="title">TO-DO LIST APP</h1>
+                <hr class="line" />
+            </header>
+
+            <main>
+                <ul>
+                    <% items.forEach((item) => { %>
+                    <li class="todo" key="<%=item.id%>">
+                        <div>
+                            <p class="todo-title"><%=item.content%></p>
+                            <p class="todo-meta">Created: <%=item.created_at%></p>
+                        </div>
+                        <span class="todo-delete-btn material-icons"> close </span>
+                    </li>
+                    <% }); %>
+                </ul>
+            </main>
+
+            <footer>
+                <a class="btn" href="/insert">Insert new to-do</a>
+            </footer>
+        </div>
+
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+            integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        ></script>
+
+        <script>
+            $('.todo-delete-btn').click((obj) => {
+                const id = $(obj.target).parent().attr('key');
+
+                $.post('/delete-todo', { id }, (res, stats, xhr) => {
+                    console.log(res);
+                    location.reload();
+                });
+            });
+
+            // const params = new URLSearchParams();
+            // params.append('name', 'hello world');
+
+            // fetch('/delete-todo', { method: 'POST', body: params }).then(async (res) => {
+            //     console.log(await res.text());
+            //     console.log('Sent!');
+            //     window.location.reload();
+            // });
+        </script>
+    </body>
+</html>
