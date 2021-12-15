@@ -1,6 +1,10 @@
 import express from 'express';
 import mysql from 'mysql2/promise';
+import dotenv from 'dotenv';
+
 import { DateTime } from 'luxon';
+
+dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -36,12 +40,13 @@ app.post('/delete-todo', async (req, res) => {
 });
 
 app.listen(port, async () => {
+    const env = process.env;
     connection = await mysql.createConnection({
-        host: 'localhost',
-        port: 3306,
-        database: 'todos-app',
-        user: 'root',
-        password: ''
+        host: env.DB_HOST,
+        port: env.DB_PORT as never as number,
+        database: env.DB_DATABASE,
+        user: env.DB_USER,
+        password: env.DB_PWD
     });
 
     connection.execute(
